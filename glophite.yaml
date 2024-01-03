@@ -61,7 +61,7 @@ layers:
   - K
   - P
   - .
-  - '-'
+  - {t: '-', s: '"'}
   - {t: /, s: <}
   - F14
   - {t: '&rgb_ug_status_macro', h: Magic}

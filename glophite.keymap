@@ -293,6 +293,14 @@ behaviors {
       mods = <(MOD_LSFT|MOD_RSFT)>;
   };
 
+  hyphen_dqt: hyphen_and_doublequote {
+      compatible = "zmk,behavior-mod-morph";
+      label = "HYPHEN_AND_DOUBLEQUOTE";
+      #binding-cells = <0>;
+      bindings = <&kp MINUS>, <&kp DQT>;
+      mods = <(MOD_LSFT|MOD_RSFT)>;
+  };
+
   slash_lt: slash_and_lowerthan {
       compatible = "zmk,behavior-mod-morph";
       label = "SLASH_AND_LOWERTHAN";
@@ -341,12 +349,12 @@ behaviors {
 
         layer_Graphite {
             bindings = <
-               &kp F1    &kp F2   &kp F3    &kp F4     &kp F5                                                                                           &kp F6   &kp F7     &kp F8     &kp F9               &kp F10
-            &kp EQUAL    &kp N1   &kp N2    &kp N3     &kp N4  &kp N5                                                                         &kp N6    &kp N7   &kp N8     &kp N9     &kp N0              &kp BSLH
-            &kp GRAVE     &kp B    &kp L     &kp D      &kp W   &kp Z                                                                   &quote_under     &kp F    &kp O      &kp U      &kp J              &kp SEMI
-       &w_caps CAPS 0     &kp N    &kp R     &kp T      &kp S   &kp G                                                                          &kp Y     &kp H    &kp A      &kp E      &kp I          &comma_qmark
-              &kp F13     &kp Q    &kp X     &kp M      &kp C   &kp V   &lt 7 ESC  &kp LCTRL   &kp DEL  &kp LGUI   &kp LALT  &lt 6 RET         &kp K     &kp P  &kp DOT  &kp MINUS  &slash_lt               &kp F14
- &magic LAYER_Magic 0  &kp HOME  &kp END  &kp LEFT  &kp RIGHT          &lt 5 BSPC  &kp LSHFT  &kp LGUI   &kp TAB  &kp SPACE      &mo 8                &kp DOWN   &kp UP  &kp PG_UP  &kp PG_DN  &magic LAYER_Magic 0
+               &kp F1    &kp F2   &kp F3    &kp F4     &kp F5                                                                                           &kp F6   &kp F7       &kp F8     &kp F9               &kp F10
+            &kp EQUAL    &kp N1   &kp N2    &kp N3     &kp N4  &kp N5                                                                         &kp N6    &kp N7   &kp N8       &kp N9     &kp N0              &kp BSLH
+            &kp GRAVE     &kp B    &kp L     &kp D      &kp W   &kp Z                                                                   &quote_under     &kp F    &kp O        &kp U      &kp J              &kp SEMI
+       &w_caps CAPS 0     &kp N    &kp R     &kp T      &kp S   &kp G                                                                          &kp Y     &kp H    &kp A        &kp E      &kp I          &comma_qmark
+              &kp F13     &kp Q    &kp X     &kp M      &kp C   &kp V   &lt 7 ESC  &kp LCTRL   &kp DEL  &kp LGUI   &kp LALT  &lt 6 RET         &kp K     &kp P  &kp DOT  &hyphen_dqt  &slash_lt               &kp F14
+ &magic LAYER_Magic 0  &kp HOME  &kp END  &kp LEFT  &kp RIGHT          &lt 5 BSPC  &kp LSHFT  &kp LGUI   &kp TAB  &kp SPACE      &mo 8                &kp DOWN   &kp UP    &kp PG_UP  &kp PG_DN  &magic LAYER_Magic 0
             >;
         };
 
