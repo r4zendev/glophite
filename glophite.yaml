@@ -75,8 +75,8 @@ layers:
   - TAB
   - SPACE
   - Symbol
-  - UP
   - DOWN
+  - UP
   - PG UP
   - PG DN
   - {t: '&rgb_ug_status_macro', h: Magic}
@@ -156,8 +156,8 @@ layers:
   - TAB
   - SPACE
   - Symbol
-  - UP
   - DOWN
+  - UP
   - PG UP
   - PG DN
   - {t: '&rgb_ug_status_macro', h: Magic}
@@ -237,8 +237,8 @@ layers:
   - TAB
   - SPACE
   - Symbol
-  - UP
   - DOWN
+  - UP
   - PG UP
   - PG DN
   - {t: '&rgb_ug_status_macro', h: Magic}
@@ -318,8 +318,8 @@ layers:
   - TAB
   - SPACE
   - Symbol
-  - UP
   - DOWN
+  - UP
   - PG UP
   - PG DN
   - {t: '&rgb_ug_status_macro', h: Magic}
