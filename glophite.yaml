@@ -58,8 +58,8 @@ layers:
   - LGUI
   - LALT
   - {t: RET, h: Function}
-  - P
   - K
+  - P
   - .
   - {t: '-', s: '"'}
   - {t: /, s: <}
