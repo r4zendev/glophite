@@ -47,19 +47,19 @@ layers:
   - I
   - {t: ',', s: '?'}
   - F13
-  - Q
   - X
+  - Q
   - M
   - C
   - V
-  - {t: ESC, h: Function}
+  - {t: ESC, h: Cursor}
   - LCTRL
   - DEL
   - LGUI
   - LALT
-  - {t: RET, h: Number}
-  - K
+  - {t: RET, h: Function}
   - P
+  - K
   - .
   - {t: '-', s: '"'}
   - {t: /, s: <}
@@ -69,7 +69,7 @@ layers:
   - END
   - LEFT
   - RIGHT
-  - {t: BSPC, h: Cursor}
+  - {t: BSPC, h: Number}
   - LSHFT
   - LGUI
   - TAB
@@ -133,12 +133,12 @@ layers:
   - C
   - V
   - B
-  - {t: ESC, h: Function}
+  - {t: ESC, h: Cursor}
   - LCTRL
   - DEL
   - LGUI
   - LALT
-  - RET
+  - {t: RET, h: Function}
   - N
   - M
   - ','
@@ -150,7 +150,7 @@ layers:
   - END
   - LEFT
   - RIGHT
-  - {t: BSPC, h: Cursor}
+  - {t: BSPC, h: Number}
   - LSHFT
   - LGUI
   - TAB
@@ -214,12 +214,12 @@ layers:
   - C
   - D
   - V
-  - {t: ESC, h: Function}
+  - {t: ESC, h: Cursor}
   - LCTRL
   - DEL
   - LGUI
   - LALT
-  - RET
+  - {t: RET, h: Function}
   - K
   - H
   - ','
@@ -231,7 +231,7 @@ layers:
   - END
   - LEFT
   - RIGHT
-  - {t: BSPC, h: Cursor}
+  - {t: BSPC, h: Number}
   - LSHFT
   - LGUI
   - TAB
@@ -295,12 +295,12 @@ layers:
   - ''''
   - {t: ., s: ;}
   - _
-  - {t: ESC, h: Function}
+  - {t: ESC, h: Cursor}
   - LCTRL
   - DEL
   - LGUI
   - LALT
-  - RET
+  - {t: RET, h: Function}
   - B
   - F
   - G
@@ -312,7 +312,7 @@ layers:
   - END
   - LEFT
   - RIGHT
-  - {t: BSPC, h: Cursor}
+  - {t: BSPC, h: Number}
   - LSHFT
   - LGUI
   - TAB
@@ -404,87 +404,6 @@ layers:
   - ''
   - ''
   - ''
-  Cursor:
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - LG(K)
-  - LC(LEFT)
-  - LG(LS(LBKT))
-  - {t: LSHFT, h: sticky}
-  - LG(LS(RBKT))
-  - LC(RIGHT)
-  - PG UP
-  - HOME
-  - UP
-  - END
-  - TAB
-  - ''
-  - LG(F)
-  - LGUI
-  - LALT
-  - LCTRL
-  - LSHFT
-  - LG(S)
-  - PG DN
-  - LEFT
-  - DOWN
-  - RIGHT
-  - RET
-  - ''
-  - LG(I)
-  - LG(Z)
-  - LG(X)
-  - LG(C)
-  - LG(V)
-  - LG(A)
-  - ''
-  - ''
-  - ''
-  - LS(LA(LEFT))
-  - LA(BSPC)
-  - LA(DEL)
-  - ''
-  - BSPC
-  - LG(LEFT)
-  - LG(RIGHT)
-  - DEL
-  - ''
-  - LG(Q)
-  - ''
-  - ''
-  - ''
-  - ''
-  - {type: held}
-  - ''
-  - ''
-  - LS(LA(RIGHT))
-  - LA(LEFT)
-  - LA(RIGHT)
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
   Number:
   - ''
   - ''
@@ -496,157 +415,76 @@ layers:
   - ''
   - ''
   - ''
-  - '|'
-  - '!'
-  - '~'
-  - $
-  - '#'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
   - ^
+  - '#'
+  - $
+  - '~'
+  - '!'
+  - '|'
   - ''
   - ''
   - ''
   - ''
   - ''
   - ''
-  - K
-  - ':'
+  - '%'
   - '7'
   - '8'
   - '9'
-  - '%'
+  - ':'
+  - K
+  - KP NUM
+  - LGUI
+  - LALT
+  - LCTRL
+  - LSHFT
   - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - J
-  - '-'
+  - +
   - '4'
   - '5'
   - '6'
-  - +
+  - '-'
+  - J
   - ''
-  - LSHFT
-  - LCTRL
-  - LALT
-  - LGUI
-  - KP NUM
-  - R
-  - /
+  - RET
+  - SPACE
+  - TAB
+  - BSPC
+  - ''
+  - ''
+  - ''
+  - ''
+  - <
+  - '>'
+  - '='
+  - '*'
   - '1'
   - '2'
   - '3'
-  - '*'
-  - '='
-  - <
-  - '>'
+  - /
+  - R
+  - ''
+  - ''
+  - ''
   - ''
   - ''
   - {type: held}
   - ''
   - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - '@'
+  - ','
+  - .
+  - '0'
   - (
   - '['
   - ']'
   - )
-  - '0'
-  - .
-  - ','
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  Function:
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - MEDIA HOME
-  - PLAY
-  - PREV
-  - NEXT
-  - STOP
-  - EJECT
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - WWW
-  - F7
-  - F8
-  - F9
-  - F10
-  - F13
-  - ''
-  - LGUI
-  - LALT
-  - LCTRL
-  - LSHFT
-  - ''
-  - CALC
-  - F4
-  - F5
-  - F6
-  - F11
-  - F14
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - {type: held}
-  - ''
-  - ''
-  - PREV
-  - NEXT
-  - PP
-  - AL FILES
-  - F1
-  - F2
-  - F3
-  - F12
-  - F15
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - MUTE
-  - VOL DN
-  - VOL UP
-  - BRI MAX
-  - BRI UP
-  - BRI DN
-  - BRI MIN
-  - BRI AUTO
+  - '@'
   Symbol:
   - ''
   - ''
@@ -723,6 +561,168 @@ layers:
   - ''
   - ''
   - {type: held}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  Cursor:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - LG(K)
+  - LC(LEFT)
+  - LG(LS(LBKT))
+  - {t: LSHFT, h: sticky}
+  - LG(LS(RBKT))
+  - LC(RIGHT)
+  - PG UP
+  - HOME
+  - UP
+  - END
+  - TAB
+  - ''
+  - LG(F)
+  - LGUI
+  - LALT
+  - LCTRL
+  - LSHFT
+  - LG(S)
+  - PG DN
+  - LEFT
+  - DOWN
+  - RIGHT
+  - RET
+  - ''
+  - LG(I)
+  - LG(Z)
+  - LG(X)
+  - LG(C)
+  - LG(V)
+  - LG(A)
+  - {type: held}
+  - ''
+  - ''
+  - LS(LA(LEFT))
+  - LA(BSPC)
+  - LA(DEL)
+  - ''
+  - BSPC
+  - LG(LEFT)
+  - LG(RIGHT)
+  - DEL
+  - ''
+  - LG(Q)
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - LS(LA(RIGHT))
+  - LA(LEFT)
+  - LA(RIGHT)
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  Function:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - EJECT
+  - STOP
+  - PREV
+  - NEXT
+  - PLAY
+  - MEDIA HOME
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - F11
+  - F12
+  - F13
+  - F14
+  - F15
+  - WWW
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - F6
+  - F7
+  - F8
+  - F9
+  - F10
+  - CALC
+  - ''
+  - LSHFT
+  - LCTRL
+  - LALT
+  - LGUI
+  - ''
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - AL FILES
+  - PP
+  - PREV
+  - NEXT
+  - ''
+  - ''
+  - {type: held}
+  - ''
+  - LEFT
+  - DOWN
+  - UP
+  - RIGHT
+  - ''
+  - BRI AUTO
+  - BRI MIN
+  - BRI DN
+  - BRI UP
+  - BRI MAX
+  - MUTE
+  - VOL DN
+  - VOL UP
+  - ''
+  - ''
+  - ''
   - ''
   - ''
   - ''

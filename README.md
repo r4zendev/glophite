@@ -2,6 +2,6 @@
 
 This is my layout for MoErgo's Glove80 board.
 
-[View it in MoErgo's layout editor](https://my.glove80.com/#/layout/user/d28d6929-b515-4cc0-bea7-d3616bf1bc27)
+[View it in MoErgo's layout editor](https://my.glove80.com/#/layout/user/f132644b-cb91-4e70-94d3-382a72e9ad7f)
 
 ![Layout SVG](glophite.svg)
