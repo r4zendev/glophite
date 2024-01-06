@@ -5,4 +5,4 @@ It uses [Graphite layout](https://github.com/rdavison/graphite-layout) with swap
 
 [View it in MoErgo's layout editor](https://my.glove80.com/#/layout/user/970282ba-4ec1-4057-bbb3-a35c8b2f7c84)
 
-![Layout SVG](glophite.svg)
+![Layout SVG](glophite-34k.svg)
