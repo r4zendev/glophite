@@ -384,27 +384,27 @@ behaviors {
       mods = <(MOD_LSFT|MOD_RSFT)>;
   };
 
-  hyphen_semi: hyphen_and_semicolon {
+  hyphen_qmark: hyphen_and_question {
       compatible = "zmk,behavior-mod-morph";
-      label = "HYPHEN_AND_SEMICOLON";
+      label = "HYPHEN_AND_question";
       #binding-cells = <0>;
-      bindings = <&kp MINUS>, <&kp SEMI>;
+      bindings = <&kp MINUS>, <&kp QMARK>;
       mods = <(MOD_LSFT|MOD_RSFT)>;
   };
 
-  comma_qmark: comma_and_question {
+  comma_semi: comma_and_semicolon {
       compatible = "zmk,behavior-mod-morph";
-      label = "COMMA_AND_QUESTION";
+      label = "COMMA_AND_SEMICOLON";
       #binding-cells = <0>;
-      bindings = <&kp COMMA>, <&kp QMARK>;
+      bindings = <&kp COMMA>, <&kp SEMI>;
       mods = <(MOD_LSFT|MOD_RSFT)>;
   };
 
-  dot_excl: dot_and_exclmark {
+  dot_colon: dot_and_colon {
       compatible = "zmk,behavior-mod-morph";
-      label = "DOT_AND_EXCL";
+      label = "DOT_AND_COLON";
       #binding-cells = <0>;
-      bindings = <&kp DOT>, <&kp EXCL>;
+      bindings = <&kp DOT>, <&kp COLON>;
       mods = <(MOD_LSFT|MOD_RSFT)>;
   };
 };
@@ -418,12 +418,12 @@ behaviors {
 
         layer_Graphite {
             bindings = <
-                &none   &none   &none   &none   &none                                                                               &none         &none      &none         &none                 &none
-                &none   &none   &none   &none   &none   &none                                                               &none   &none         &none      &none         &none                 &none
-                &none   &kp B   &kp L   &kp D   &kp W   &kp Z                                                        &quote_under   &kp F         &kp O      &kp U         &kp J                 &none
-                &none   &kp N   &kp R   &kp T   &kp S   &kp G                                                               &kp Y   &kp H         &kp A      &kp E         &kp I                 &none
-                &none   &kp X   &kp Q   &kp M   &kp C   &kp V   &none      &none   &none   &none      &none   &none         &kp K   &kp P  &comma_qmark  &dot_excl  &hyphen_semi                 &none
- &magic LAYER_Magic 0   &none   &none   &none   &none           &mo 2  &kp LSHFT   &none   &none  &kp SPACE   &mo 3                 &none         &none      &none         &none  &magic LAYER_Magic 0
+                &none   &none   &none   &none   &none                                                                         &none         &none          &none        &none                 &none
+                &none   &none   &none   &none   &none   &none                                                         &none   &none         &none          &none        &none                 &none
+                &none   &kp B   &kp L   &kp D   &kp W   &kp Z                                                         &kp J   &kp F         &kp O          &kp U  &comma_semi                 &none
+                &none   &kp N   &kp R   &kp T   &kp S   &kp G                                                         &kp Y   &kp H         &kp A          &kp E        &kp I                 &none
+                &none   &kp X   &kp Q   &kp M   &kp C   &kp V   &none      &none   &none   &none      &none   &none   &kp K   &kp P  &quote_under  &hyphen_qmark   &dot_colon                 &none
+ &magic LAYER_Magic 0   &none   &none   &none   &none           &mo 2  &kp LSHFT   &none   &none  &kp SPACE   &mo 3           &none         &none          &none        &none  &magic LAYER_Magic 0
             >;
         };
 
