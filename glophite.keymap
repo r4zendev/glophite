@@ -22,10 +22,15 @@
 
 /* Automatically generated layer name #define */
 #define LAYER_Graphite 0
-#define LAYER_Magic 1
-#define LAYER_Nav 2
-#define LAYER_Sym 3
-#define LAYER_Num 4
+#define LAYER_QWERTY 1
+#define LAYER_Symbol 2
+#define LAYER_Number 3
+#define LAYER_Cursor 4
+#define LAYER_Function 5
+#define LAYER_Mouse 6
+#define LAYER_System 7
+#define LAYER_Gaming 8
+#define LAYER_Magic 9
 
 /* To deal with the situation where there is no Lower layer, to keep &lower happy */
 #ifndef LAYER_Lower
@@ -265,106 +270,91 @@
 
     /* Custom Defined Behaviors */
 / {
-    #define SPC_P LC(LEFT)
-#define SPC_N LC(RIGHT)
-#define TAB_P LG(LS(LBKT))
-#define TAB_N LG(LS(RBKT))
+    #ifndef OPERATING_SYSTEM
+//#define OPERATING_SYSTEM 1 // linux
+#define OPERATING_SYSTEM 2 // macos
+//#define OPERATING_SYSTEM 3 // windows
+#endif
+#if OPERATING_SYSTEM == 2
+    #define _C      LG
+    #define _REDO   _C(LS(Z))
+    #define _POWER  K_POWER
+    #define _W      LA
+    #define _HOME   _C(LEFT)
+    #define _END    _C(RIGHT)
+    #define SPC_P   LC(LEFT)
+    #define SPC_N   LC(RIGHT)
+    #define TAB_P   _C(LS(LBKT))
+    #define TAB_N   _C(LS(RBKT))
+#else
+    #define _C      LC
+    #define _REDO   _C(Y)
+    #define _POWER  C_POWER
+    #define _W      _C
+    #define _HOME   HOME
+    #define _END    END
+#endif
+#define _SLEEP      C_SLEEP
+#if OPERATING_SYSTEM == 3
+    #define _LOCK   LG(L)
+#elif OPERATING_SYSTEM == 2
+    #define _LOCK   _C(LC(Q))
+#elif OPERATING_SYSTEM == 1
+    #define _LOCK   K_LOCK
+#endif
+#define _UNDO       _C(Z)
+#define _CUT        _C(X)
+#define _COPY       _C(C)
+#define _PASTE      _C(V)
+#define _FIND       _C(F)
+#define _FIND_NEXT  _C(G)
+#define _FIND_PREV  _C(LS(G))
 
-// TODO: add QWERTY, and possibly other layouts to test
-#define ALPHA_LAYERS 0
-
-#define COMBO_TIMEOUT_MS 75
-
-/*                    Keys
-╭──────────────────────╮ ╭──────────────────────╮
-│x  x  x  x  x         │ │         x  x  x  x  x│
-│xx xx xx xx xx xx     │ │     xx xx xx xx xx xx│
-│xx 23 24 25 26 27     │ │     28 29 30 31 32 xx│
-│xx 35 36 37 38 39     │ │     40 41 42 43 44 xx│
-│xx 47 48 49 50 51     │ │     58 59 60 61 62 xx│
-│xx xx xx xx xx        │ │        xx xx xx xx xx│
-│               69 xx  │ │  xx 74               │
-│                70 xx │ │ xx 73                │
-╰───────────────╮ xx xx│ │xx xx ╭───────────────╯
-                ╰──────╯ ╰──────╯              */
-
-combos {
-  compatible = "zmk,combos";
-
-  combo_caps {
-    bindings = <&w_caps CAPS 0>;
-    key-positions = <39 40>;
-    layers = <ALPHA_LAYERS>;
-    timeout-ms = <COMBO_TIMEOUT_MS>;
-  };
-
-  combo_tab {
-    bindings = <&kp TAB>;
-    key-positions = <26 27>;
-    layers = <ALPHA_LAYERS>;
-    timeout-ms = <COMBO_TIMEOUT_MS>;
-  };
-
-  combo_esc {
-    bindings = <&kp ESC>;
-    key-positions = <47 48>;
-    layers = <ALPHA_LAYERS>;
-    timeout-ms = <COMBO_TIMEOUT_MS>;
-  };
-
-  combo_alt {
-    bindings = <&kp LALT>;
-    key-positions = <48 49>;
-    layers = <ALPHA_LAYERS>;
-    timeout-ms = <COMBO_TIMEOUT_MS>;
-  };
-
-
-
-  combo_bspc {
-    bindings = <&kp BSPC>;
-    key-positions = <60 61>;
-    layers = <ALPHA_LAYERS>;
-    timeout-ms = <COMBO_TIMEOUT_MS>;
-  };
-
-  combo_ret {
-    bindings = <&kp RET>;
-    key-positions = <61 62>;
-    layers = <ALPHA_LAYERS>;
-    timeout-ms = <COMBO_TIMEOUT_MS>;
-  };
-
-  combo_lshft {
-    bindings = <&kp LSHFT>;
-    key-positions = <44 62>;
-    layers = <ALPHA_LAYERS>;
-    timeout-ms = <COMBO_TIMEOUT_MS>;
-  };
-
-
-
-  combo_cmd {
-    bindings = <&kp LGUI>;
-    key-positions = <69 70>;
-    layers = <ALPHA_LAYERS>;
-    timeout-ms = <COMBO_TIMEOUT_MS>;
-  };
-
-  combo_ctrl {
-    bindings = <&kp LCTRL>;
-    key-positions = <73 74>;
-    layers = <ALPHA_LAYERS>;
-    timeout-ms = <COMBO_TIMEOUT_MS>;
-  };
-
-  combo_num_layer {
-    bindings = <&mo 4>;
-    key-positions = <69 74>;
-    layers = <ALPHA_LAYERS>;
-    timeout-ms = <COMBO_TIMEOUT_MS>;
-  };
-};
+//
+// Glove80 specific symbol overrides to support non "en-US" locales
+//
+#undef  AMPS
+#define AMPS  LS(N7)
+#undef  AT
+#define AT    LS(N2)
+#undef  CARET
+#define CARET LS(N6)
+#undef  COLON
+#define COLON LS(SEMI)
+#undef  DLLR
+#define DLLR  LS(N4)
+#undef  DQT
+#define DQT   LS(SQT)
+#undef  EXCL
+#define EXCL  LS(N1)
+#undef  GT
+#define GT    LS(DOT)
+#undef  HASH
+#define HASH  LS(N3)
+#undef  LBRC
+#define LBRC  LS(LBKT)
+#undef  LPAR
+#define LPAR  LS(N9)
+#undef  LT
+#define LT    LS(COMMA)
+#undef  PIPE
+#define PIPE  LS(BSLH)
+#undef  PLUS
+#define PLUS  LS(EQUAL)
+#undef  PRCNT
+#define PRCNT LS(N5)
+#undef  QMARK
+#define QMARK LS(FSLH)
+#undef  RBRC
+#define RBRC  LS(RBKT)
+#undef  RPAR
+#define RPAR  LS(N0)
+#undef  STAR
+#define STAR  LS(N8)
+#undef  TILDE
+#define TILDE LS(GRAVE)
+#undef  UNDER
+#define UNDER LS(MINUS)
 
 behaviors {
   w_caps: capsword_and_capslock {
@@ -386,7 +376,7 @@ behaviors {
 
   hyphen_qmark: hyphen_and_question {
       compatible = "zmk,behavior-mod-morph";
-      label = "HYPHEN_AND_question";
+      label = "HYPHEN_AND_QUESTION";
       #binding-cells = <0>;
       bindings = <&kp MINUS>, <&kp QMARK>;
       mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -407,7 +397,236 @@ behaviors {
       bindings = <&kp DOT>, <&kp COLON>;
       mods = <(MOD_LSFT|MOD_RSFT)>;
   };
+
+  fslh_bslh: fslh_and_bslh {
+      compatible = "zmk,behavior-mod-morph";
+      label = "FSLH_AND_BSLH";
+      #binding-cells = <0>;
+      bindings = <&kp FSLH>, <&kp BSLH>;
+      mods = <(MOD_LSFT|MOD_RSFT)>;
+  };
+
+  //////////////////////////////////////////////////////////////////////////
+  //
+  // ZMK global overrides
+  //
+  //////////////////////////////////////////////////////////////////////////
+
+  //
+  // CapsWord - ported from Pascal Getreuer's extension for QMK
+  // - https://zmk.dev/docs/behaviors/caps-word
+  // - https://getreuer.info/posts/keyboards/caps-word/index.html
+  //
+  behavior_caps_word {
+      continue-list = <
+          UNDERSCORE MINUS
+          BACKSPACE DELETE
+          N1 N2 N3 N4 N5 N6 N7 N8 N9 N0
+      >;
+  };
 };
+
+macros {
+    //////////////////////////////////////////////////////////////////////////
+    //
+    // Approximation of Pascal Getreuer's Select Word macro from QMK
+    // - https://getreuer.info/posts/keyboards/select-word/index.html
+    //
+    //////////////////////////////////////////////////////////////////////////
+
+    //
+    // SELECT_WORD_DELAY defines how long the macro waits (milliseconds)
+    // after moving the cursor before it selects a word.  A larger delay
+    // may allow the macro to move to the next word upon each invocation.
+    //
+    #ifndef SELECT_WORD_DELAY
+    #define SELECT_WORD_DELAY 1
+    #endif
+
+    ZMK_MACRO(select_none,
+        wait-ms = <SELECT_WORD_DELAY>;
+        tap-ms = <SELECT_WORD_DELAY>;
+        bindings = <&kp DOWN &kp UP &kp RIGHT &kp LEFT>;
+    )
+
+    //
+    // select a word (jumps to next word upon each successive invocation)
+    //
+    select_word: select_word {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&select_word_right>, <&select_word_left>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    ZMK_MACRO(select_word_right,
+        wait-ms = <SELECT_WORD_DELAY>;
+        tap-ms = <SELECT_WORD_DELAY>;
+        bindings = <&kp _W(RIGHT) &kp _W(LEFT) &kp _W(LS(RIGHT))>;
+    )
+    ZMK_MACRO(select_word_left,
+        wait-ms = <SELECT_WORD_DELAY>;
+        tap-ms = <SELECT_WORD_DELAY>;
+        bindings = <&kp _W(LEFT) &kp _W(RIGHT) &kp _W(LS(LEFT))>;
+    )
+
+    //
+    // extend current selection by one word
+    //
+    extend_word: extend_word {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&extend_word_right>, <&extend_word_left>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    ZMK_MACRO(extend_word_right,
+        wait-ms = <SELECT_WORD_DELAY>;
+        tap-ms = <SELECT_WORD_DELAY>;
+        bindings = <&kp _W(LS(RIGHT))>;
+    )
+    ZMK_MACRO(extend_word_left,
+        wait-ms = <SELECT_WORD_DELAY>;
+        tap-ms = <SELECT_WORD_DELAY>;
+        bindings = <&kp _W(LS(LEFT))>;
+    )
+
+    //
+    // select current line
+    //
+    select_line: select_line {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&select_line_right>, <&select_line_left>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    ZMK_MACRO(select_line_right,
+        wait-ms = <SELECT_WORD_DELAY>;
+        tap-ms = <SELECT_WORD_DELAY>;
+        bindings = <&kp _HOME &kp LS(_END)>;
+    )
+    ZMK_MACRO(select_line_left,
+        wait-ms = <SELECT_WORD_DELAY>;
+        tap-ms = <SELECT_WORD_DELAY>;
+        bindings = <&kp _END &kp LS(_HOME)>;
+    )
+
+    //
+    // extend current selection by one line
+    //
+    extend_line: extend_line {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&extend_line_right>, <&extend_line_left>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    ZMK_MACRO(extend_line_right,
+        wait-ms = <SELECT_WORD_DELAY>;
+        tap-ms = <SELECT_WORD_DELAY>;
+        bindings = <&kp LS(DOWN) &kp LS(_END)>;
+    )
+    ZMK_MACRO(extend_line_left,
+        wait-ms = <SELECT_WORD_DELAY>;
+        tap-ms = <SELECT_WORD_DELAY>;
+        bindings = <&kp LS(UP) &kp LS(_HOME)>;
+    )
+};
+
+//////////////////////////////////////////////////////////////////////////
+//
+// Mouse keys (control mouse via keyboard) -- requires PR23 beta firmware:
+// select "community.pr23.mouse-keys" from the drop-down menu located at
+// Glove80 Layout Editor > Settings > Advanced Settings > Firmware Version
+//
+// - https://github.com/moergo-sc/zmk/pull/23
+// - https://gist.github.com/krissen/dd27082e7ab0575619c7a31f4d2ec7ae
+// - https://github.com/zmkfirmware/zmk/compare/main...urob:zmk:mouse-3.2
+//
+//////////////////////////////////////////////////////////////////////////
+
+//
+// MOUSE_MOTION_DELAY defines how long to wait (milliseconds) before starting
+// to move the mouse pointer.
+//
+#ifndef MOUSE_MOTION_DELAY
+#define MOUSE_MOTION_DELAY 0
+#endif
+
+//
+// MOUSE_MOTION_ACCELERATION_EXPONENT sets how the mouse pointer accelerates:
+//
+// acceleration exponent 0: uniform speed
+// acceleration exponent 1: uniform acceleration
+// acceleration exponent 2: uniform jerk
+//
+#ifndef MOUSE_MOTION_ACCELERATION_EXPONENT
+#define MOUSE_MOTION_ACCELERATION_EXPONENT 1
+#endif
+
+//
+// MOUSE_MOTION_TIME_TO_MAXIMUM_SPEED defines how long to wait (milliseconds)
+// before the mouse pointer speed is suddenly boosted to the maximum value.
+//
+#ifndef MOUSE_MOTION_TIME_TO_MAXIMUM_SPEED
+#define MOUSE_MOTION_TIME_TO_MAXIMUM_SPEED 300
+#endif
+
+//
+// MOUSE_MOTION_MAXIMUM_SPEED defines how quickly the mouse pointer can move.
+//
+#ifndef MOUSE_MOTION_MAXIMUM_SPEED
+#define MOUSE_MOTION_MAXIMUM_SPEED 600
+#endif
+
+//
+// MOUSE_SCROLL_DELAY defines how long to wait (milliseconds) before starting
+// to move the mouse pointer.
+//
+#ifndef MOUSE_SCROLL_DELAY
+#define MOUSE_SCROLL_DELAY 0
+#endif
+
+//
+// MOUSE_SCROLL_ACCELERATION_EXPONENT sets how the mouse pointer accelerates:
+//
+// acceleration exponent 0: uniform speed
+// acceleration exponent 1: uniform acceleration
+// acceleration exponent 2: uniform jerk
+//
+#ifndef MOUSE_SCROLL_ACCELERATION_EXPONENT
+#define MOUSE_SCROLL_ACCELERATION_EXPONENT 0
+#endif
+
+//
+// MOUSE_SCROLL_TIME_TO_MAXIMUM_SPEED defines how long to wait (milliseconds)
+// before the mouse pointer speed is suddenly boosted to the maximum value.
+//
+#ifndef MOUSE_SCROLL_TIME_TO_MAXIMUM_SPEED
+#define MOUSE_SCROLL_TIME_TO_MAXIMUM_SPEED 300
+#endif
+
+//
+// MOUSE_SCROLL_MAXIMUM_SPEED defines how quickly the mouse wheel can scroll.
+//
+#ifndef MOUSE_SCROLL_MAXIMUM_SPEED
+#define MOUSE_SCROLL_MAXIMUM_SPEED 10
+#endif
+
+/*HACK*/};
+// ==== MOUSE-KEY <section begins> ====
+#define ZMK_MOUSE_DEFAULT_MOVE_VAL MOUSE_MOTION_MAXIMUM_SPEED
+#define ZMK_MOUSE_DEFAULT_SCRL_VAL MOUSE_SCROLL_MAXIMUM_SPEED
+#include <dt-bindings/zmk/mouse.h>
+&mmv {
+  delay-ms = <MOUSE_MOTION_DELAY>;
+  acceleration-exponent = <MOUSE_MOTION_ACCELERATION_EXPONENT>;
+  time-to-max-speed-ms = <MOUSE_MOTION_TIME_TO_MAXIMUM_SPEED>;
+};
+&msc {
+  delay-ms = <MOUSE_SCROLL_DELAY>;
+  acceleration-exponent = <MOUSE_SCROLL_ACCELERATION_EXPONENT>;
+  time-to-max-speed-ms = <MOUSE_SCROLL_TIME_TO_MAXIMUM_SPEED>;
+};
+// ==== MOUSE-KEY <section ends> =====
+/*HACK*//{
 };
 
     /* Automatically generated keymap */
@@ -418,56 +637,111 @@ behaviors {
 
         layer_Graphite {
             bindings = <
-                &none   &none   &none   &none   &none                                                                         &none         &none          &none        &none                 &none
-                &none   &none   &none   &none   &none   &none                                                         &none   &none         &none          &none        &none                 &none
-                &none   &kp B   &kp L   &kp D   &kp W   &kp Z                                                         &kp J   &kp F         &kp O          &kp U  &comma_semi                 &none
-                &none   &kp N   &kp R   &kp T   &kp S   &kp G                                                         &kp Y   &kp H         &kp A          &kp E        &kp I                 &none
-                &none   &kp X   &kp Q   &kp M   &kp C   &kp V   &none      &none   &none   &none      &none   &none   &kp K   &kp P  &quote_under  &hyphen_qmark   &dot_colon                 &none
- &magic LAYER_Magic 0   &none   &none   &none   &none           &mo 2  &kp LSHFT   &none   &none  &kp SPACE   &mo 3           &none         &none          &none        &none  &magic LAYER_Magic 0
+               &kp F1    &kp F2   &kp F3    &kp F4     &kp F5                                                                                   &kp F6        &kp F7         &kp F8       &kp F9               &kp F10
+            &kp EQUAL    &kp N1   &kp N2    &kp N3     &kp N4  &kp N5                                                                 &kp N6    &kp N7        &kp N8         &kp N9       &kp N0             &kp MINUS
+            &kp GRAVE     &kp B    &kp L     &kp D      &kp W   &kp Z                                                                  &kp J     &kp F         &kp O          &kp U  &comma_semi            &fslh_bslh
+            &kp LCTRL     &kp N    &kp R     &kp T      &kp S   &kp G                                                                  &kp Y     &kp H         &kp A          &kp E        &kp I              &kp LALT
+              &kp F13     &kp X    &kp Q     &kp M      &kp C   &kp V  &lt 3 ESC      &mo 4   &kp DEL    &mo 7      &mo 6  &lt 5 RET   &kp K     &kp R  &quote_under  &hyphen_qmark   &dot_colon               &kp F14
+ &magic LAYER_Magic 0  &kp HOME  &kp END  &kp LEFT  &kp RIGHT           &kp BSPC  &kp LSHFT  &kp LGUI  &kp TAB  &kp SPACE      &mo 2          &kp DOWN        &kp UP      &kp PG_DN    &kp PG_UP  &magic LAYER_Magic 0
+            >;
+        };
+
+        layer_QWERTY {
+            bindings = <
+               &kp F1    &kp F2   &kp F3    &kp F4     &kp F5                                                                                   &kp F6     &kp F7     &kp F8     &kp F9               &kp F10
+            &kp EQUAL    &kp N1   &kp N2    &kp N3     &kp N4  &kp N5                                                                 &kp N6    &kp N7     &kp N8     &kp N9     &kp N0             &kp MINUS
+            &kp GRAVE     &kp Q    &kp W     &kp E      &kp R   &kp T                                                                  &kp Y     &kp U      &kp I      &kp O      &kp P              &kp LBKT
+             &kp RBKT     &kp A    &kp S     &kp D      &kp F   &kp G                                                                  &kp H     &kp J      &kp K      &kp L   &kp SEMI               &kp SQT
+            &kp LCTRL     &kp Z    &kp X     &kp C      &kp V   &kp B  &lt 3 ESC      &mo 4   &kp DEL    &mo 7      &mo 6  &lt 5 RET   &kp N     &kp M  &kp COMMA    &kp DOT   &kp FSLH              &kp LALT
+ &magic LAYER_Magic 0  &kp HOME  &kp END  &kp LEFT  &kp RIGHT           &kp BSPC  &kp LSHFT  &kp LGUI  &kp TAB  &kp SPACE      &mo 2          &kp DOWN     &kp UP  &kp PG_DN  &kp PG_UP  &magic LAYER_Magic 0
+            >;
+        };
+
+        layer_Symbol {
+            bindings = <
+     &none      &none      &none      &none     &none                                                                                 &none        &none      &none      &none   &none
+     &none  &kp GRAVE   &kp LPAR   &kp RPAR  &kp SEMI  &kp COMMA                                                           &none      &none        &none      &none      &none   &none
+  &kp EXCL   &kp LBRC    &kp SQT    &kp DQT  &kp RBRC  &kp QMARK                                                           &none  &kp LSHFT    &kp LCTRL   &kp LALT   &kp LGUI   &none
+  &kp HASH  &kp CARET  &kp EQUAL  &kp UNDER  &kp DLLR   &kp STAR                                                           &none   &kp BSPC      &kp TAB  &kp SPACE    &kp RET   &none
+ &kp TILDE     &kp LT   &kp PIPE  &kp MINUS    &kp GT   &kp FSLH   &kp BSLH    &kp DOT  &kp STAR   &none   &none   &none   &none    &kp DEL  &kp LS(TAB)      &none      &none   &none
+    &kp AT   &kp AMPS   &kp LBKT   &kp RBKT  &kp PLUS             &kp PRCNT  &kp COLON  &kp SEMI   &none   &none   &none           &kp DOWN       &kp UP   &kp LEFT  &kp RIGHT   &none
+            >;
+        };
+
+        layer_Number {
+            bindings = <
+      &none      &none      &none     &none     &none                                                                               &none     &none      &none      &none      &none
+      &none      &none      &none     &none     &none   &none                                                         &kp CARET  &kp HASH  &kp DLLR  &kp TILDE   &kp EXCL   &kp PIPE
+      &none      &none      &none     &none     &none   &none                                                         &kp PRCNT    &kp N7    &kp N8     &kp N9  &kp COLON      &kp K
+ &kp KP_NUM  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI   &none                                                          &kp PLUS    &kp N4    &kp N5     &kp N6  &kp MINUS      &kp J
+      &none      &none      &none     &none     &none   &none   &none   &none   &none     &kp LT   &kp GT  &kp EQUAL   &kp STAR    &kp N1    &kp N2     &kp N3   &kp FSLH  &kp LS(G)
+      &none      &none      &none     &none     &none           &none   &none   &none  &kp COMMA  &kp DOT     &kp N0               &trans    &trans     &trans     &trans     &kp AT
+            >;
+        };
+
+        layer_Cursor {
+            bindings = <
+     &none           &none         &none         &none           &none                                                                                                &none           &none           &none      &none        &none
+     &none           &none         &none         &none           &none       &none                                                                         &none      &none           &none           &none      &none        &none
+ &kp _C(K)       &kp SPC_P     &kp TAB_P     &kp TAB_N       &kp SPC_N    &kp _CUT                                                                      &kp _CUT   &kp BSPC          &kp UP         &kp DEL  &kp _REDO    &kp _C(K)
+ &kp _C(L)        &kp LGUI      &kp LALT     &kp LCTRL       &kp LSHFT   &kp _COPY                                                                     &kp _COPY   &kp LEFT        &kp DOWN       &kp RIGHT  &kp _UNDO    &kp _C(L)
+ &kp _C(J)       &kp _FIND  &select_word  &select_line       &kp _C(A)  &kp _PASTE   &none   &none   &none         &none  &extend_line  &extend_word  &kp _PASTE  &kp PSCRN         &kp INS        &kp SLCK  &kp _C(A)    &kp _C(J)
+ &kp _C(H)  &kp _FIND_PREV  &extend_word  &extend_line  &kp _FIND_NEXT               &none   &none   &none  &select_none  &select_line  &select_word              &kp _FIND  &kp _FIND_PREV  &kp _FIND_NEXT  &kp _C(H)  &kp LG(DOT)
+            >;
+        };
+
+        layer_Function {
+            bindings = <
+  &none       &none       &none       &none       &none                                                                                          &none     &none      &none      &none   &none
+  &none  &kp C_STOP  &kp C_PREV  &kp C_NEXT  &kp C_PLAY  &kp C_EJECT                                                                   &none     &none     &none      &none      &none   &none
+  &none     &kp F10      &kp F7      &kp F8      &kp F9      &kp F13                                                                   &none     &none     &none      &none      &none   &none
+  &none     &kp F11      &kp F4      &kp F5      &kp F6      &kp F14                                                                   &none  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT   &none
+  &none     &kp F12      &kp F1      &kp F2      &kp F3      &kp F15    &kp C_PP    &kp C_PREV    &kp C_NEXT   &none   &none   &none   &none     &none     &none      &none      &none   &none
+  &none       &none       &none       &none       &none               &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP   &none   &none   &none             &none     &none      &none      &none   &none
+            >;
+        };
+
+        layer_Mouse {
+            bindings = <
+  &none   &none           &none           &none            &none                                                                            &none      &none     &none     &none   &none
+  &none   &none           &none           &none            &none   &none                                                         &none      &none      &none     &none     &none   &none
+  &none   &none  &msc SCRL_LEFT    &mmv MOVE_UP  &msc SCRL_RIGHT   &none                                                         &none      &none      &none     &none     &none   &none
+  &none   &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT   &none                                                         &none  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI   &none
+  &none   &none           &none  &msc SCRL_DOWN     &msc SCRL_UP   &none  &mkp MCLK      &none   &none   &none   &none   &none   &none      &none      &none     &none     &none   &none
+  &none   &none           &none           &none            &none          &mkp LCLK  &mkp RCLK   &none   &none   &none   &none              &none      &none     &none     &none   &none
+            >;
+        };
+
+        layer_System {
+            bindings = <
+           &none            &none            &none            &none            &none                                                                                      &none      &none     &none     &none   &none
+           &none            &none            &none            &none            &none   &none                                                                   &none      &none      &none     &none     &none   &none
+           &none            &none  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI            &none   &none                                                                   &none      &none      &none     &none     &none   &none
+ &rgb_ug RGB_TOG  &rgb_ug RGB_EFR  &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &rgb_ug RGB_EFF   &none                                                                   &none  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI   &none
+           &none  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &rgb_ug RGB_SPI   &none  &kp _LOCK  &kp _SLEEP       &kp _POWER   &none   &none   &none   &none      &none      &none     &none     &none   &none
+           &none            &none            &none            &none            &none          &kp PSCRN    &kp SLCK  &kp PAUSE_BREAK   &none   &none   &none              &none      &none     &none     &none   &none
+            >;
+        };
+
+        layer_Gaming {
+            bindings = <
+    &trans     &trans  &trans  &trans  &trans                                                                                    &trans  &trans     &trans   &trans    &trans
+    &trans     &trans  &trans  &trans  &trans   &trans                                                                   &trans  &trans  &trans     &trans   &trans    &trans
+ &kp MINUS  &kp GRAVE   &kp B   &kp N   &kp M  &kp SQT                                                                    &kp B   &kp N   &kp M  &kp COMMA  &kp DOT  &kp FSLH
+     &kp T    &kp TAB   &kp Q   &kp W   &kp E    &kp R                                                                    &kp T   &kp Y   &kp U      &kp I    &kp O     &kp P
+     &kp G  &kp LSHFT   &kp A   &kp S   &kp D    &kp F    &kp ESC   &kp RET  &kp PAUSE_BREAK  &kp BSPC  &kp DEL  &trans   &kp G   &kp H   &kp J      &kp K    &kp L  &kp SEMI
+     &kp V  &kp LCTRL   &kp Z   &kp X   &kp C           &kp SPACE  &kp LALT         &kp LGUI    &tog 8   &trans  &trans          &trans  &trans     &trans   &trans    &trans
             >;
         };
 
         layer_Magic {
             bindings = <
-          &none            &none            &none            &none            &none                                                                            &none   &none   &none   &none           &none
-          &none            &none            &none            &none            &none            &none                                                   &none   &none   &none   &none   &none           &none
- &bt BT_CLR_ALL  &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI  &rgb_ug RGB_TOG                                                   &none   &none   &none   &none   &none  &bt BT_CLR_ALL
-    &bootloader  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF                                                   &none   &none   &none   &none   &none     &bootloader
-     &sys_reset            &none            &none            &none            &none            &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none      &sys_reset
-          &none            &none            &none            &none            &none                    &bt_0   &bt_1   &none   &none   &bt_2   &bt_3           &none   &none   &none   &none           &none
-            >;
-        };
-
-        layer_Nav {
-            bindings = <
-  &none      &none      &none      &none      &none                                                                                           &none         &none          &none          &none   &none
-  &none      &none      &none      &none      &none      &none                                                                      &none     &none         &none          &none          &none   &none
-  &none    &kp TAB  &kp TAB_P  &kp TAB_N  &kp SPC_P  &kp SPC_N                                                                  &kp PG_UP  &kp HOME        &kp UP        &kp END  &kp LC(SPACE)   &none
-  &none  &sk LSHFT  &sk LCTRL   &sk LALT   &sk LGUI  &kp LG(S)                                                                  &kp PG_DN  &kp LEFT      &kp DOWN      &kp RIGHT        &kp RET   &none
-  &none  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(A)   &none   &none   &none   &none         &none          &none  &kp LA(BSPC)  &kp BSPC  &kp LG(LEFT)  &kp LG(RIGHT)        &kp DEL   &none
-  &none      &none      &none      &none      &none              &none   &none   &none   &none  &kp LA(LEFT)  &kp LA(RIGHT)                   &none         &none          &none          &none   &none
-            >;
-        };
-
-        layer_Sym {
-            bindings = <
-  &none      &none      &none      &none      &none                                                                                &none     &none      &none      &none   &none
-  &none      &none      &none      &none      &none      &none                                                          &none      &none     &none      &none      &none   &none
-  &none     &kp LT   &kp LBKT   &kp LBRC   &kp LPAR   &kp HASH                                                       &kp STAR   &kp RPAR  &kp RBRC   &kp RBKT     &kp GT   &none
-  &none   &kp PLUS  &kp MINUS  &kp PRCNT  &kp EQUAL  &kp UNDER                                                       &kp DLLR   &sk LGUI  &sk LALT  &sk LCTRL  &sk LSHFT   &none
-  &none  &kp TILDE  &kp GRAVE   &kp PIPE   &kp EXCL   &kp FSLH     &none      &none   &none   &none   &none   &none  &kp BSLH  &kp QMARK  &kp AMPS  &kp CARET     &kp AT   &none
-  &none      &none      &none      &none      &none             &kp SEMI  &kp COLON   &none   &none   &none   &none                &none     &none      &none      &none   &none
-            >;
-        };
-
-        layer_Num {
-            bindings = <
-  &none    &none      &none     &none     &none                                                                       &none     &none      &none    &none   &none
-  &none    &none      &none     &none     &none    &none                                                    &none     &none     &none      &none    &none   &none
-  &none   &kp N1     &kp N2    &kp N3    &kp N4   &kp N5                                                   &kp N6    &kp N7    &kp N8     &kp N9   &kp N0   &none
-  &none  &kp F11  &sk LCTRL  &sk LALT  &sk LGUI  &sk F13                                                  &sk F14  &sk LGUI  &sk LALT  &sk LCTRL  &kp F12   &none
-  &none   &kp F1     &kp F2    &kp F3    &kp F4   &kp F5   &none   &none   &none   &none   &none   &none   &kp F6    &kp F7    &kp F8     &kp F9  &kp F10   &none
-  &none    &none      &none     &none     &none            &none   &none   &none   &none   &none   &none              &none     &none      &none    &none   &none
+  &bt BT_CLR            &none            &none            &none            &none                                                                                  &none   &none   &none   &none  &bt BT_CLR_ALL
+      &tog 1           &tog 8            &none            &none            &none            &none                                                         &none   &none   &none   &none   &none           &none
+       &none  &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI  &rgb_ug RGB_TOG                                                         &none   &none   &none   &none   &none           &none
+ &bootloader  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF                                                         &none   &none   &none   &none   &none     &bootloader
+  &sys_reset            &none            &none            &none            &none            &none   &bt_2   &bt_3         &none   &none   &none   &none   &none   &none   &none   &none   &none      &sys_reset
+       &none            &none            &none            &none            &none                    &bt_0   &bt_1  &out OUT_USB   &none   &none   &none           &none   &none   &none   &none           &none
             >;
         };
 

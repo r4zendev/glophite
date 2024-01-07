@@ -1,28 +1,28 @@
 layers:
   Graphite:
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - F6
+  - F7
+  - F8
+  - F9
+  - F10
+  - '='
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - '-'
+  - '`'
   - B
   - L
   - D
@@ -33,8 +33,8 @@ layers:
   - O
   - U
   - {t: ',', s: ;}
-  - ''
-  - ''
+  - {t: /, s: \}
+  - LCTRL
   - N
   - R
   - T
@@ -45,56 +45,691 @@ layers:
   - A
   - E
   - I
-  - ''
-  - ''
+  - LALT
+  - F13
   - X
   - Q
   - M
   - C
   - V
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - {t: ESC, h: Number}
+  - Cursor
+  - DEL
+  - System
+  - Mouse
+  - {t: RET, h: Function}
   - K
-  - P
-  - {t: '''', s: _}
-  - {t: '-', s: '?'}
-  - {t: ., s: ':'}
-  - ''
+  - R
+  - {t: '''', s: LS(MINUS)}
+  - {t: '-', s: LS(FSLH)}
+  - {t: ., s: LS(SEMI)}
+  - F14
   - {t: '&rgb_ug_status_macro', h: Magic}
+  - HOME
+  - END
+  - LEFT
+  - RIGHT
+  - BSPC
+  - LSHFT
+  - LGUI
+  - TAB
+  - SPACE
+  - Symbol
+  - DOWN
+  - UP
+  - PG DN
+  - PG UP
+  - {t: '&rgb_ug_status_macro', h: Magic}
+  QWERTY:
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - F6
+  - F7
+  - F8
+  - F9
+  - F10
+  - '='
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - '-'
+  - '`'
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - '['
+  - ']'
+  - A
+  - S
+  - D
+  - F
+  - G
+  - H
+  - J
+  - K
+  - L
+  - ;
+  - ''''
+  - LCTRL
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - {t: ESC, h: Number}
+  - Cursor
+  - DEL
+  - System
+  - Mouse
+  - {t: RET, h: Function}
+  - N
+  - M
+  - ','
+  - .
+  - /
+  - LALT
+  - {t: '&rgb_ug_status_macro', h: Magic}
+  - HOME
+  - END
+  - LEFT
+  - RIGHT
+  - BSPC
+  - LSHFT
+  - LGUI
+  - TAB
+  - SPACE
+  - Symbol
+  - DOWN
+  - UP
+  - PG DN
+  - PG UP
+  - {t: '&rgb_ug_status_macro', h: Magic}
+  Symbol:
   - ''
   - ''
   - ''
   - ''
-  - Nav
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - '`'
+  - LS(9)
+  - LS(0)
+  - ;
+  - ','
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - LS(1)
+  - LS(LBKT)
+  - ''''
+  - LS(SQT)
+  - LS(RBKT)
+  - LS(FSLH)
+  - ''
+  - LSHFT
+  - LCTRL
+  - LALT
+  - LGUI
+  - ''
+  - LS(3)
+  - LS(6)
+  - '='
+  - LS(MINUS)
+  - LS(4)
+  - LS(8)
+  - ''
+  - BSPC
+  - TAB
+  - SPACE
+  - RET
+  - ''
+  - LS(GRAVE)
+  - LS(COMMA)
+  - LS(BSLH)
+  - '-'
+  - LS(DOT)
+  - /
+  - \
+  - .
+  - LS(8)
+  - ''
+  - ''
+  - ''
+  - ''
+  - DEL
+  - LS(TAB)
+  - ''
+  - ''
+  - ''
+  - LS(2)
+  - LS(7)
+  - '['
+  - ']'
+  - LS(EQUAL)
+  - LS(5)
+  - LS(SEMI)
+  - ;
+  - ''
+  - ''
+  - {type: held}
+  - DOWN
+  - UP
+  - LEFT
+  - RIGHT
+  - ''
+  Number:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - LS(6)
+  - LS(3)
+  - LS(4)
+  - LS(GRAVE)
+  - LS(1)
+  - LS(BSLH)
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - LS(5)
+  - '7'
+  - '8'
+  - '9'
+  - LS(SEMI)
+  - K
+  - KP NUM
+  - LSHFT
+  - LCTRL
+  - LALT
+  - LGUI
+  - ''
+  - LS(EQUAL)
+  - '4'
+  - '5'
+  - '6'
+  - '-'
+  - J
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {type: held}
+  - ''
+  - ''
+  - LS(COMMA)
+  - LS(DOT)
+  - '='
+  - LS(8)
+  - '1'
+  - '2'
+  - '3'
+  - /
+  - LS(G)
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ','
+  - .
+  - '0'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - LS(2)
+  Cursor:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - LG(K)
+  - LC(LEFT)
+  - LG(LS(LBKT))
+  - LG(LS(RBKT))
+  - LC(RIGHT)
+  - LG(X)
+  - LG(X)
+  - BSPC
+  - UP
+  - DEL
+  - LG(LS(Z))
+  - LG(K)
+  - LG(L)
+  - LGUI
+  - LALT
+  - LCTRL
+  - LSHFT
+  - LG(C)
+  - LG(C)
+  - LEFT
+  - DOWN
+  - RIGHT
+  - LG(Z)
+  - LG(L)
+  - LG(J)
+  - LG(F)
+  - {t: '&select_word_right', s: '&select_word_left'}
+  - {t: '&select_line_right', s: '&select_line_left'}
+  - LG(A)
+  - LG(V)
+  - ''
+  - {type: held}
+  - ''
+  - ''
+  - {t: '&extend_line_right', s: '&extend_line_left'}
+  - {t: '&extend_word_right', s: '&extend_word_left'}
+  - LG(V)
+  - PSCRN
+  - INS
+  - SLCK
+  - LG(A)
+  - LG(J)
+  - LG(H)
+  - LG(LS(G))
+  - {t: '&extend_word_right', s: '&extend_word_left'}
+  - {t: '&extend_line_right', s: '&extend_line_left'}
+  - LG(G)
+  - ''
+  - ''
+  - ''
+  - '&select_none'
+  - {t: '&select_line_right', s: '&select_line_left'}
+  - {t: '&select_word_right', s: '&select_word_left'}
+  - LG(F)
+  - LG(LS(G))
+  - LG(G)
+  - LG(H)
+  - LG(DOT)
+  Function:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - STOP
+  - PREV
+  - NEXT
+  - PLAY
+  - EJECT
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - F10
+  - F7
+  - F8
+  - F9
+  - F13
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - F11
+  - F4
+  - F5
+  - F6
+  - F14
+  - ''
+  - LGUI
+  - LALT
+  - LCTRL
   - LSHFT
   - ''
   - ''
+  - F12
+  - F1
+  - F2
+  - F3
+  - F15
+  - PP
+  - PREV
+  - NEXT
+  - ''
+  - ''
+  - {type: held}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - MUTE
+  - VOL DN
+  - VOL UP
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  Mouse:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - '&msc SCRL_LEFT'
+  - '&mmv MOVE_UP'
+  - '&msc SCRL_RIGHT'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - '&mmv MOVE_LEFT'
+  - '&mmv MOVE_DOWN'
+  - '&mmv MOVE_RIGHT'
+  - ''
+  - ''
+  - LSHFT
+  - LCTRL
+  - LALT
+  - LGUI
+  - ''
+  - ''
+  - ''
+  - ''
+  - '&msc SCRL_DOWN'
+  - '&msc SCRL_UP'
+  - ''
+  - '&mkp MCLK'
+  - ''
+  - ''
+  - ''
+  - {type: held}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - '&mkp LCLK'
+  - '&mkp RCLK'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  System:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - RGB HUD
+  - RGB HUI
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - RGB TOG
+  - RGB EFR
+  - RGB BRD
+  - RGB BRI
+  - RGB EFF
+  - ''
+  - ''
+  - LSHFT
+  - LCTRL
+  - LALT
+  - LGUI
+  - ''
+  - ''
+  - RGB SPD
+  - RGB SAD
+  - RGB SAI
+  - RGB SPI
+  - ''
+  - LG(LC(Q))
+  - SLEEP
+  - POWER
+  - {type: held}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - PSCRN
+  - SLCK
+  - PAUSE BREAK
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  Gaming:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '-'
+  - '`'
+  - B
+  - N
+  - M
+  - ''''
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - /
+  - T
+  - TAB
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - G
+  - LSHFT
+  - A
+  - S
+  - D
+  - F
+  - ESC
+  - RET
+  - PAUSE BREAK
+  - BSPC
+  - DEL
+  - {t: ▽, type: trans}
+  - G
+  - H
+  - J
+  - K
+  - L
+  - ;
+  - V
+  - LCTRL
+  - Z
+  - X
+  - C
   - SPACE
-  - Sym
-  - ''
-  - ''
-  - ''
-  - ''
-  - {t: '&rgb_ug_status_macro', h: Magic}
+  - LALT
+  - LGUI
+  - {t: Gaming, h: toggle}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   Magic:
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - BT CLR
   - ''
   - ''
   - ''
@@ -104,6 +739,19 @@ layers:
   - ''
   - ''
   - BT CLR ALL
+  - {t: QWERTY, h: toggle}
+  - {t: Gaming, h: toggle}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
   - RGB SPI
   - RGB SAI
   - RGB HUI
@@ -114,7 +762,7 @@ layers:
   - ''
   - ''
   - ''
-  - BT CLR ALL
+  - ''
   - '&bootloader'
   - RGB SPD
   - RGB SAD
@@ -133,8 +781,8 @@ layers:
   - ''
   - ''
   - ''
-  - ''
-  - ''
+  - '&bt_2'
+  - '&bt_3'
   - ''
   - ''
   - ''
@@ -152,286 +800,12 @@ layers:
   - ''
   - '&bt_0'
   - '&bt_1'
+  - OUT USB
   - ''
   - ''
-  - '&bt_2'
-  - '&bt_3'
   - ''
   - ''
   - ''
   - ''
   - ''
-  Nav:
   - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - TAB
-  - LG(LS(LBKT))
-  - LG(LS(RBKT))
-  - LC(LEFT)
-  - LC(RIGHT)
-  - PG UP
-  - HOME
-  - UP
-  - END
-  - LC(SPACE)
-  - ''
-  - ''
-  - {t: LSHFT, h: sticky}
-  - {t: LCTRL, h: sticky}
-  - {t: LALT, h: sticky}
-  - {t: LGUI, h: sticky}
-  - LG(S)
-  - PG DN
-  - LEFT
-  - DOWN
-  - RIGHT
-  - RET
-  - ''
-  - ''
-  - LG(Z)
-  - LG(X)
-  - LG(C)
-  - LG(V)
-  - LG(A)
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - LA(BSPC)
-  - BSPC
-  - LG(LEFT)
-  - LG(RIGHT)
-  - DEL
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - {type: held}
-  - ''
-  - ''
-  - ''
-  - LA(LEFT)
-  - LA(RIGHT)
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  Sym:
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - <
-  - '['
-  - '{'
-  - (
-  - '#'
-  - '*'
-  - )
-  - '}'
-  - ']'
-  - '>'
-  - ''
-  - ''
-  - +
-  - '-'
-  - '%'
-  - '='
-  - _
-  - $
-  - {t: LGUI, h: sticky}
-  - {t: LALT, h: sticky}
-  - {t: LCTRL, h: sticky}
-  - {t: LSHFT, h: sticky}
-  - ''
-  - ''
-  - '~'
-  - '`'
-  - '|'
-  - '!'
-  - /
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - \
-  - '?'
-  - '&'
-  - ^
-  - '@'
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ;
-  - ':'
-  - ''
-  - ''
-  - ''
-  - {type: held}
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  Num:
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - '1'
-  - '2'
-  - '3'
-  - '4'
-  - '5'
-  - '6'
-  - '7'
-  - '8'
-  - '9'
-  - '0'
-  - ''
-  - ''
-  - F11
-  - {t: LCTRL, h: sticky}
-  - {t: LALT, h: sticky}
-  - {t: LGUI, h: sticky}
-  - {t: F13, h: sticky}
-  - {t: F14, h: sticky}
-  - {t: LGUI, h: sticky}
-  - {t: LALT, h: sticky}
-  - {t: LCTRL, h: sticky}
-  - F12
-  - ''
-  - ''
-  - F1
-  - F2
-  - F3
-  - F4
-  - F5
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - F6
-  - F7
-  - F8
-  - F9
-  - F10
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - {type: held}
-  - ''
-  - ''
-  - ''
-  - ''
-  - {type: held}
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-combos:
-- p: [39, 40]
-  k: {t: '&caps_word', h: CAPS}
-  l: [Graphite]
-- p: [26, 27]
-  k: TAB
-  l: [Graphite]
-- p: [47, 48]
-  k: ESC
-  l: [Graphite]
-- p: [48, 49]
-  k: LALT
-  l: [Graphite]
-- p: [60, 61]
-  k: BSPC
-  l: [Graphite]
-- p: [61, 62]
-  k: RET
-  l: [Graphite]
-- p: [44, 62]
-  k: LSHFT
-  l: [Graphite]
-- p: [69, 70]
-  k: LGUI
-  l: [Graphite]
-- p: [73, 74]
-  k: LCTRL
-  l: [Graphite]
-- p: [69, 74]
-  k: Num
-  l: [Graphite]
