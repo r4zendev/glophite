@@ -59,7 +59,7 @@ layers:
   - Mouse
   - {t: RET, h: Function}
   - K
-  - R
+  - P
   - {t: '''', s: LS(MINUS)}
   - {t: '-', s: LS(FSLH)}
   - {t: ., s: LS(SEMI)}

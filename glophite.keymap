@@ -641,7 +641,7 @@ macros {
             &kp EQUAL    &kp N1   &kp N2    &kp N3     &kp N4  &kp N5                                                                 &kp N6    &kp N7        &kp N8         &kp N9       &kp N0             &kp MINUS
             &kp GRAVE     &kp B    &kp L     &kp D      &kp W   &kp Z                                                                  &kp J     &kp F         &kp O          &kp U  &comma_semi            &fslh_bslh
             &kp LCTRL     &kp N    &kp R     &kp T      &kp S   &kp G                                                                  &kp Y     &kp H         &kp A          &kp E        &kp I              &kp LALT
-              &kp F13     &kp X    &kp Q     &kp M      &kp C   &kp V  &lt 3 ESC      &mo 4   &kp DEL    &mo 7      &mo 6  &lt 5 RET   &kp K     &kp R  &quote_under  &hyphen_qmark   &dot_colon               &kp F14
+              &kp F13     &kp X    &kp Q     &kp M      &kp C   &kp V  &lt 3 ESC      &mo 4   &kp DEL    &mo 7      &mo 6  &lt 5 RET   &kp K     &kp P  &quote_under  &hyphen_qmark   &dot_colon               &kp F14
  &magic LAYER_Magic 0  &kp HOME  &kp END  &kp LEFT  &kp RIGHT           &kp BSPC  &kp LSHFT  &kp LGUI  &kp TAB  &kp SPACE      &mo 2          &kp DOWN        &kp UP      &kp PG_DN    &kp PG_UP  &magic LAYER_Magic 0
             >;
         };
