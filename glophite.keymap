@@ -378,38 +378,24 @@ combos {
   compatible = "zmk,combos";
 
   combo_caps {
-    bindings = <&w_caps CAPS 0>;
+    bindings = <&w_caps>;
     key-positions = <39 40>;
     layers = <ALPHA_LAYERS>;
     timeout-ms = <COMBO_TIMEOUT_MS>;
   };
 
+
+
   combo_tab {
     bindings = <&kp TAB>;
-    key-positions = <26 27>;
-    layers = <ALPHA_LAYERS>;
-    timeout-ms = <COMBO_TIMEOUT_MS>;
-  };
-
-  combo_esc {
-    bindings = <&kp ESC>;
     key-positions = <47 48>;
     layers = <ALPHA_LAYERS>;
     timeout-ms = <COMBO_TIMEOUT_MS>;
   };
 
-  combo_alt {
-    bindings = <&kp LALT>;
-    key-positions = <48 49>;
-    layers = <ALPHA_LAYERS>;
-    timeout-ms = <COMBO_TIMEOUT_MS>;
-  };
-
-
-
-  combo_lshft {
-    bindings = <&kp LSHFT>;
-    key-positions = <44 62>;
+  combo_bspc {
+    bindings = <&kp BSPC>;
+    key-positions = <61 62>;
     layers = <ALPHA_LAYERS>;
     timeout-ms = <COMBO_TIMEOUT_MS>;
   };
@@ -429,6 +415,8 @@ combos {
     layers = <ALPHA_LAYERS>;
     timeout-ms = <COMBO_TIMEOUT_MS>;
   };
+
+
 
   combo_sys_layer {
     bindings = <&mo 6>;
@@ -454,12 +442,11 @@ combos {
 
 behaviors {
   w_caps: capsword_and_capslock {
-      compatible = "zmk,behavior-hold-tap";
+      compatible = "zmk,behavior-mod-morph";
       label = "CAPSWORD_AND_CAPSLOCK";
-      flavor = "tap-preferred";
-      tapping-term-ms = <200>;
-      #binding-cells = <2>;
-      bindings = <&kp>, <&caps_word>;
+      #binding-cells = <0>;
+      bindings = <&caps_word>, <&kp CAPS>;
+      mods = <(MOD_LSFT|MOD_RSFT)>;
   };
 
   quote_under: quote_and_underscore {

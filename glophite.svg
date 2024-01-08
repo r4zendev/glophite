@@ -401,46 +401,38 @@ path.combo {
 <path d="M504,196 l177,0" class="combo"/>
 <rect rx="6" ry="6" x="490" y="183" width="28" height="26" class="combo"/>
 <text x="504" y="196" class="combo tap"><tspan style="font-size: 70%">&amp;caps_word</tspan></text>
-<text x="504" y="207" class="combo hold">CAPS</text>
+<text x="504" y="185" class="combo shifted">CAPS</text>
 </g>
 <g class="combo combopos-1">
-<rect rx="6" ry="6" x="266" y="127" width="28" height="26" class="combo"/>
-<text x="280" y="140" class="combo tap">TAB</text>
+<rect rx="6" ry="6" x="98" y="253" width="28" height="26" class="combo"/>
+<text x="112" y="266" class="combo tap">TAB</text>
 </g>
 <g class="combo combopos-2">
-<rect rx="6" ry="6" x="98" y="253" width="28" height="26" class="combo"/>
-<text x="112" y="266" class="combo tap">ESC</text>
+<rect rx="6" ry="6" x="882" y="253" width="28" height="26" class="combo"/>
+<text x="896" y="266" class="combo tap">BSPC</text>
 </g>
 <g class="combo combopos-3">
-<rect rx="6" ry="6" x="154" y="239" width="28" height="26" class="combo"/>
-<text x="168" y="252" class="combo tap">LALT</text>
-</g>
-<g class="combo combopos-4">
-<rect rx="6" ry="6" x="910" y="239" width="28" height="26" class="combo"/>
-<text x="924" y="252" class="combo tap">LSHFT</text>
-</g>
-<g class="combo combopos-5">
 <rect rx="6" ry="6" x="328" y="350" width="28" height="26" class="combo"/>
 <text x="342" y="363" class="combo tap">LGUI</text>
 </g>
-<g class="combo combopos-6">
+<g class="combo combopos-4">
 <rect rx="6" ry="6" x="652" y="350" width="28" height="26" class="combo"/>
 <text x="666" y="363" class="combo tap">LSHFT</text>
 </g>
-<g class="combo combopos-7">
+<g class="combo combopos-5">
 <path d="M504,312 l-114,0" class="combo"/>
 <path d="M504,312 l114,0" class="combo"/>
 <rect rx="6" ry="6" x="490" y="299" width="28" height="26" class="combo"/>
 <text x="504" y="312" class="combo tap">System</text>
 </g>
-<g class="combo combopos-8">
+<g class="combo combopos-6">
 <path d="M504,168 l-457,0" class="combo"/>
 <path d="M504,168 l457,0" class="combo"/>
 <rect rx="6" ry="6" x="490" y="155" width="28" height="26" class="combo"/>
 <text x="504" y="168" class="combo tap">QWERTY</text>
 <text x="504" y="179" class="combo hold">toggle</text>
 </g>
-<g class="combo combopos-9">
+<g class="combo combopos-7">
 <path d="M504,280 l-457,0" class="combo"/>
 <path d="M504,280 l457,0" class="combo"/>
 <rect rx="6" ry="6" x="490" y="267" width="28" height="26" class="combo"/>
@@ -745,46 +737,38 @@ path.combo {
 <path d="M504,196 l177,0" class="combo"/>
 <rect rx="6" ry="6" x="490" y="183" width="28" height="26" class="combo"/>
 <text x="504" y="196" class="combo tap"><tspan style="font-size: 70%">&amp;caps_word</tspan></text>
-<text x="504" y="207" class="combo hold">CAPS</text>
+<text x="504" y="185" class="combo shifted">CAPS</text>
 </g>
 <g class="combo combopos-1">
-<rect rx="6" ry="6" x="266" y="127" width="28" height="26" class="combo"/>
-<text x="280" y="140" class="combo tap">TAB</text>
+<rect rx="6" ry="6" x="98" y="253" width="28" height="26" class="combo"/>
+<text x="112" y="266" class="combo tap">TAB</text>
 </g>
 <g class="combo combopos-2">
-<rect rx="6" ry="6" x="98" y="253" width="28" height="26" class="combo"/>
-<text x="112" y="266" class="combo tap">ESC</text>
+<rect rx="6" ry="6" x="882" y="253" width="28" height="26" class="combo"/>
+<text x="896" y="266" class="combo tap">BSPC</text>
 </g>
 <g class="combo combopos-3">
-<rect rx="6" ry="6" x="154" y="239" width="28" height="26" class="combo"/>
-<text x="168" y="252" class="combo tap">LALT</text>
-</g>
-<g class="combo combopos-4">
-<rect rx="6" ry="6" x="910" y="239" width="28" height="26" class="combo"/>
-<text x="924" y="252" class="combo tap">LSHFT</text>
-</g>
-<g class="combo combopos-5">
 <rect rx="6" ry="6" x="328" y="350" width="28" height="26" class="combo"/>
 <text x="342" y="363" class="combo tap">LGUI</text>
 </g>
-<g class="combo combopos-6">
+<g class="combo combopos-4">
 <rect rx="6" ry="6" x="652" y="350" width="28" height="26" class="combo"/>
 <text x="666" y="363" class="combo tap">LSHFT</text>
 </g>
-<g class="combo combopos-7">
+<g class="combo combopos-5">
 <path d="M504,312 l-114,0" class="combo"/>
 <path d="M504,312 l114,0" class="combo"/>
 <rect rx="6" ry="6" x="490" y="299" width="28" height="26" class="combo"/>
 <text x="504" y="312" class="combo tap">System</text>
 </g>
-<g class="combo combopos-8">
+<g class="combo combopos-6">
 <path d="M504,168 l-457,0" class="combo"/>
 <path d="M504,168 l457,0" class="combo"/>
 <rect rx="6" ry="6" x="490" y="155" width="28" height="26" class="combo"/>
 <text x="504" y="168" class="combo tap">QWERTY</text>
 <text x="504" y="179" class="combo hold">toggle</text>
 </g>
-<g class="combo combopos-9">
+<g class="combo combopos-7">
 <path d="M504,280 l-457,0" class="combo"/>
 <path d="M504,280 l457,0" class="combo"/>
 <rect rx="6" ry="6" x="490" y="267" width="28" height="26" class="combo"/>

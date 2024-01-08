@@ -730,19 +730,13 @@ layers:
   - {t: '&rgb_ug_status_macro', h: Magic}
 combos:
 - p: [39, 40]
-  k: {t: '&caps_word', h: CAPS}
-  l: [Graphite, QWERTY]
-- p: [26, 27]
-  k: TAB
+  k: {t: '&caps_word', s: CAPS}
   l: [Graphite, QWERTY]
 - p: [47, 48]
-  k: ESC
+  k: TAB
   l: [Graphite, QWERTY]
-- p: [48, 49]
-  k: LALT
-  l: [Graphite, QWERTY]
-- p: [44, 62]
-  k: LSHFT
+- p: [61, 62]
+  k: BSPC
   l: [Graphite, QWERTY]
 - p: [69, 70]
   k: LGUI
